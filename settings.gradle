@@ -1,0 +1,4 @@
+rootProject.name = "ProyectoFinal"
+include ':app'
+include ':alumnoapp'
+include ':mylibrary'
