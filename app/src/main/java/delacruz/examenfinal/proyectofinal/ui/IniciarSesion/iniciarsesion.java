@@ -30,12 +30,13 @@ import delacruz.examenfinal.proyectofinal.MainActivity;
 import delacruz.examenfinal.proyectofinal.R;
 import delacruz.examenfinal.proyectofinal.Util.UtilDTG;
 import delacruz.examenfinal.proyectofinal.ui.Registrar.registrar;
+import delacruz.examenfinal.proyectofinal.ui.recuperar.password;
 
 public class iniciarsesion extends AppCompatActivity {
     private static final String ARCHIVO_PREF = "profesor";
     TextInputEditText edtCorreo,edtContraseña;
     Button btnIniSesion;
-    TextView Registro;
+    TextView Registro,Pass;
     ArrayList<Profesor> lstProf;
 
 
@@ -53,6 +54,7 @@ public class iniciarsesion extends AppCompatActivity {
         edtContraseña = findViewById(R.id.edtISContraseña);
         btnIniSesion = findViewById(R.id.btnISIniciarsesion);
         Registro = findViewById(R.id.txtClicRegistro);
+        Pass = findViewById(R.id.txtClicPass);
         lstProf = new ArrayList<>();
 
         requestQueue = VolleySingleton.getmInstance(this).getRequestQueue();
@@ -70,6 +72,13 @@ public class iniciarsesion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(iniciarsesion.this,registrar.class);
+                startActivity(i);
+            }
+        });
+        Pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(iniciarsesion.this, password.class);
                 startActivity(i);
             }
         });
@@ -107,7 +116,9 @@ public class iniciarsesion extends AppCompatActivity {
 //                private static final String ARCHIVO_PREF = "profesor";
                         SharedPreferences preferences = getSharedPreferences(ARCHIVO_PREF, 0);
                         SharedPreferences.Editor editor = preferences.edit();
-                        editor.putString("nombreCompleto", profesor.getProfApellidos() + " " + profesor.getProfNombre());
+                        editor.putString("nombreCompleto", profesor.getProfApellidos() + ", " + profesor.getProfNombre());
+                        editor.putString("nomb", profesor.getProfNombre());
+                        editor.putString("apell", profesor.getProfApellidos());
                         editor.putString("IDProf", String.valueOf(profesor.getIDProfesor()));
                         editor.putString("Correo", profesor.getProfCorreo());
                         editor.commit();

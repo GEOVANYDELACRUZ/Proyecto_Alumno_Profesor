@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="#7B64FD"
+    tools:context=".ui.editar.pass"
     >
 
     <TextView
@@ -49,19 +50,10 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"/>
             <TextView
-                android:id="@+id/txt_changepass_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nickname"
-                android:drawableLeft="@drawable/ic_user"
-                android:textColor="@color/white"
-                android:layout_marginBottom="10dp"/>
-            <TextView
                 android:id="@+id/txt_changepass_mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Correo Electrónico"
-                android:drawableLeft="@drawable/ic_email"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -144,7 +136,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/efredbuttonsv2"
                 android:text="@string/btnchangepass_cancel"
-                android:textColor="@color/blue"
                 android:textSize="13dp" />
             <Button
                 android:id="@+id/button_changepass_save"

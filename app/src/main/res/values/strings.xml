@@ -41,7 +41,8 @@
     <string name="N1btnCargarLista">Cargar Lista</string>
     <string name="N1txtListaCargada">Lista de alumnos cargada</string>
     <string name="N1txtSeleCurso">Selecciona el notas</string>
-    <string name="N1txtIngresarCurso">Ingresar notas</string>
+    <string name="N1txtIngresarCurso">Ingresar curso</string>
+    <string name="N1txtIngresarNotas">Ingresar notas</string>
     <string name="N1edtIngresarCurso">Curso</string>
     <string name="N1btnGuardarLista">Guardar Lista</string>
     <string-array name="Alumnos">
@@ -130,6 +131,23 @@
     <string name="txtchangepass1">Ingresa tu nueva contraseña</string>
     <string name="txtchangepass2">Comfirma tu contraseña</string>
     <string name="error_segPass1">La contraseña debe ser más segura, mi pan con mi vomo</string>
+    <string name="btnchangepass_save">GUARDAR</string>
+    <string name="btnchangepass_cancel">CANCELAR</string>
+    <string name="IStxtpass"><u>Recuperar contraseña</u></string>
+    <string name="txtEditPerfil">Editar Perfil</string>
+    <string name="txtEditPerfilDes">Edite sus datos personales</string>
+    <string name="txtChangPass">Cambia tu contraseña</string>
+    <string name="txtChangPassDes">Cambia tu contraseña por defecto por una más segura</string>
+    <string name="seraching">Cargando...</string>
+    <string name="question_ActUser">¿Desea actualizar los datos?</string>
+    <string name="question_Yes">Si</string>
+    <string name="question_No">No</string>
+    <string name="load_Register">Cargando...</string>
+    <string name="error_General">ERROR: No se pudo cargar la base de datos...</string>
+    <string name="error_msj3">No se pudo actualizar</string>
+    <string name="msj1">Datos actualizados correctamente...</string>
+    <string name="error_Null">Rellene todos los campos requeridos...</string>
+    <string name="error_Pass">Las contraseñas son distintas...</string>
 
 
 </resources>

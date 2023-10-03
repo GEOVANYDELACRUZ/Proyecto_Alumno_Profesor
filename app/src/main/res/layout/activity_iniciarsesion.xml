@@ -28,6 +28,7 @@
             android:layout_marginVertical="30dp"
             android:textAlignment="center"
             android:textStyle="bold"
+
             ></TextView>
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,15 +89,34 @@
         android:layout_gravity="center"
         android:text="@string/ISbtn"
         android:layout_marginVertical="20dp"></Button>
-    <TextView
-        android:id="@+id/txtClicRegistro"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/IStxtregis"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:layout_marginVertical="10dp"
-        ></TextView>
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtClicRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IStxtregis"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp"
+            android:layout_marginRight="50dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/txtClicPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IStxtpass"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="50dp"
+            ></TextView>
+
+    </LinearLayout>
 
 </LinearLayout>
