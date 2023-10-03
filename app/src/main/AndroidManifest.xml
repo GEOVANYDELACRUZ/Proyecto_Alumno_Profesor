@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="delacruz.examenfinal.proyectofinal">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.asignarnota.AsignarNotasAlum"></activity>
+        <activity
+            android:name=".ui.editar.pass"
+            android:exported="false" />
+        <activity
+            android:name=".ui.editar.datos"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recuperar.password"
+            android:exported="false" />
+        <activity android:name=".ui.asignarnota.AsignarNotasAlum" />
         <activity android:name=".ui.Registrar.registrar" />
         <activity
             android:name=".ui.IniciarSesion.iniciarsesion"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ui.Splash.Splash"
             android:exported="true">
@@ -33,9 +41,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ProyectoFinal.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.ProyectoFinal.NoActionBar" />
     </application>
 
 </manifest>

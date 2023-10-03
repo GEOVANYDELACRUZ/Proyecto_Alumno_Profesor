@@ -94,8 +94,8 @@
     <string name="N4txtPreferencias">Preferencias</string>
     <string name="N4txtSeleccionarTema">Seleccionar tema</string>
     <string-array name="Tema">
-    <item>Claro</item>
-    <item>Oscuro</item>
+        <item>Claro</item>
+        <item>Oscuro</item>
     </string-array>
     <string name="N4txtSeleccionarIdioma">Seleccionar idioma</string>
     <string-array name="Idioma">
@@ -111,11 +111,25 @@
         <item>12</item>
     </string-array>
     <string name="N4btnGuardarCambios">Guardar Cambios</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="DgDirectorio">Directorios</string>
     <string name="DgUpDirectorios">Regresar</string>
     <string name="DgSalir">Salir</string>
+    <string name="btneditacc_cancel">Cancelar</string>
+    <string name="btneditacc_save">Guardar</string>
+    <string name="txteditacc">Editar Perfil 👨</string>
+    <string name="txteditaccnames">Ingresa tus nombres</string>
+    <string name="txteditacclastname">Ingresa tus apellidos</string>
+    <string name="txt_restablecer_pwd">RESTABLECE TU CONTRASEÑA 🔒</string>
+    <string name="txt_comentario_pwd">Ingresa tu correo electronico para reestabler contraseña</string>
+    <string name="txt_correo_electronico">Correo electronico</string>
+    <string name="txt_restablecer">Enviar</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txteditpass">CAMBIAR CONTRASEÑA 🔑</string>
+    <string name="txtchangepass1">Ingresa tu nueva contraseña</string>
+    <string name="txtchangepass2">Comfirma tu contraseña</string>
+    <string name="error_segPass1">La contraseña debe ser más segura, mi pan con mi vomo</string>
 
 
 </resources>
