@@ -47,6 +47,7 @@ public class iniciarsesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciarsesion);
 
+
         edtUsuario = findViewById(R.id.edtISUsuario);
         edtContra = findViewById(R.id.edtISContrasena);
 
