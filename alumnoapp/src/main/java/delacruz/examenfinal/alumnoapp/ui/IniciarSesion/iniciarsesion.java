@@ -71,7 +71,6 @@ public class iniciarsesion extends AppCompatActivity {
         progresIS.setMessage("Iniciando Sesión");
         progresIS.show();
         String url = UtilDTG.RUTA+"iniciarSesionAlumnos.php?"+
-                "apPaterno=%20" + edtUsuario.getText().toString()+
                 "&DNI=" + edtContra.getText().toString().replace(" ","");
         url = url.replace(" ","%20");
         Log.e("URL: ",url);
