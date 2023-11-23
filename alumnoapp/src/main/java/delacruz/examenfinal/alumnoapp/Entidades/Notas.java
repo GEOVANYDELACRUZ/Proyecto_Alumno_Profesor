@@ -7,17 +7,37 @@ public class Notas {
     private String criterio;
     private String valor;
     private String descripcion;
+    private String cursNComment;
+    private String cursNRespuesta;
 
     public Notas() {
     }
 
-    public Notas(String codigo, String curso, String subcodigo, String criterio, String valor, String descripcion) {
+    public Notas(String codigo, String curso, String subcodigo, String criterio, String valor, String descripcion, String cursNComment, String cursNRespuesta) {
         this.codigo = codigo;
         this.curso = curso;
         this.subcodigo = subcodigo;
         this.criterio = criterio;
         this.valor = valor;
         this.descripcion = descripcion;
+        this.cursNComment = cursNComment;
+        this.cursNRespuesta = cursNRespuesta;
+    }
+
+    public String getCursNComment() {
+        return cursNComment;
+    }
+
+    public void setCursNComment(String cursNComment) {
+        this.cursNComment = cursNComment;
+    }
+
+    public String getCursNRespuesta() {
+        return cursNRespuesta;
+    }
+
+    public void setCursNRespuesta(String cursNRespuesta) {
+        this.cursNRespuesta = cursNRespuesta;
     }
 
     public String getCodigo() {

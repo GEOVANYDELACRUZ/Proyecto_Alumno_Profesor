@@ -50,6 +50,10 @@
     </string-array>
     <string name="N2txtSeleccionarTamaL">Seleccionar tamaño de letra</string>
     <string name="N2btnGuardarCambios">Guardar cambios</string>
+    <string name="error_msj1">No se pudo agregar el comentario</string>
+    <string name="msj1">Comentario agregado correctamente.</string>
+    <string name="error_General">Error al conectar con la base de datos.</string>
+    <string name="load_Register">Cargando...</string>
     <string-array name="TamaLetra">
         <item>20</item>
         <item>18</item>

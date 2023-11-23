@@ -148,17 +148,18 @@ public class visualizarnotaFragment extends Fragment {
                         notas = new Notas();
                         JSONObject jsonObject=null;
                         jsonObject = json.getJSONObject(i);
-                        notas.setCodigo(jsonObject.getString("IDCurso"));
+                        notas.setCodigo(jsonObject.getString("IDCursNota"));
                         notas.setCurso(jsonObject.getString("curNombre"));
                         notas.setSubcodigo(jsonObject.getString("IDNota"));
                         notas.setCriterio(jsonObject.getString("notCriterio"));
                         notas.setValor(jsonObject.getString("notValor"));
                         notas.setDescripcion(jsonObject.getString("notDescrip"));
-                        Toast.makeText(getContext(), "Curso : "+ notas.getCurso(), Toast.LENGTH_SHORT).show();
+                        notas.setCursNComment(jsonObject.getString("cursNComment"));
+                        notas.setCursNRespuesta(jsonObject.getString("cursNRespuesta"));
+//                        Toast.makeText(getContext(), "Curso : "+ notas.getCurso(), Toast.LENGTH_SHORT).show();
                         lstNotas.add(notas);
                     }
-                    AdapterCurso adapterCurso = new AdapterCurso(getContext(), lstNotas);
-                    _recLisNotas.setAdapter(adapterCurso);
+                    _recLisNotas.setAdapter(new AdapterCurso(getContext(), lstNotas));
                 }catch (Exception e){
                     Log.i("TT","Error al listar CURSOS : "+e);
                 }

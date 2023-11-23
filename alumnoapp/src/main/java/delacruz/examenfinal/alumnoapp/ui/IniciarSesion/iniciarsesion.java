@@ -72,7 +72,8 @@ public class iniciarsesion extends AppCompatActivity {
         progresIS.setMessage("Iniciando Sesión");
         progresIS.show();
         String url = UtilDTG.RUTA+"iniciarSesionAlumnos.php?"+
-                "&DNI=" + edtContra.getText().toString().replace(" ","");
+                "&dni=" + edtContra.getText().toString().replace(" ","")+
+                "&pass=" + edtContra.getText().toString().replace(" ","");
         url = url.replace(" ","%20");
         Log.e("URL: ",url);
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
