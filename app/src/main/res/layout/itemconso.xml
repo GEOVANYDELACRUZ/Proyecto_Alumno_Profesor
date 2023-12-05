@@ -8,30 +8,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtCONSDNI"
         android:layout_weight="1"
-        ></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCONSCriterio"
-        android:layout_weight="1"
-        ></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCONSNota"
-        android:layout_weight="1"
-        ></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCONSAlumnoNomb"
-        android:layout_weight="1"
+        android:text="DNI"
         ></TextView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtCONSAlumnoApelli"
         android:layout_weight="1"
+        android:text="apell"
+        ></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCONSAlumnoNomb"
+        android:layout_weight="1"
+        android:text="nomb"
+        ></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCONSNota"
+        android:layout_weight="1"
+        android:text="nota"
+        ></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCONSCriterio"
+        android:layout_weight="1"
+        android:text="Crit"
         ></TextView>
 
 

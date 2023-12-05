@@ -45,7 +45,6 @@ public class AsignarNotas extends Fragment {
 
     String codigoProf;
     String codigoCurso;
-    String curDescrip;
 
     ProgressDialog progreso;
     RequestQueue requestQueue;
@@ -84,21 +83,13 @@ public class AsignarNotas extends Fragment {
 
         lstCurso=new ArrayList<Curso>();
         verCursos();
-        //Apoyo
         lytAN2 = root.findViewById(R.id.lytAN2);
 
-
-//        String texto_Item[]= .toArray(new String[lst_textos.size()]);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,texto_Item);
-//        spiCursos.setAdapter(adapter);
         spiCursos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Curso curso = lstCurso.get(position);
                 codigoCurso=curso.getCodigo();
-                curDescrip=curso.getCurso();
-
-//                Toast.makeText(getContext(), "Curso :"+curso.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -109,7 +100,7 @@ public class AsignarNotas extends Fragment {
         btnIrCalif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                guardarcalif();
+                goNotaAlumno();
             }
         });
 
@@ -160,7 +151,7 @@ public class AsignarNotas extends Fragment {
         requestQueue.add(jsonObjectRequest);
     }
 
-    private void guardarcalif() {
+    private void goNotaAlumno() {
         //                      Guardar valores en el SHARED PREFERENCES
 //                private static final String ARCHIVO_PREF = "curso";
         SharedPreferences preferences = getActivity().getSharedPreferences(ARCHIVO_CURSO, 0);
@@ -168,7 +159,6 @@ public class AsignarNotas extends Fragment {
         editor.putString("IDCurso", codigoCurso);
         editor.putString("IDProf", codigoProf);
         editor.putString("Criterio",edtCriterioCa.getText().toString());
-        editor.putString("Descripcion",curDescrip);
         editor.commit();
         Intent i = new Intent(getContext(),AsignarNotasAlum.class);
         startActivity(i);

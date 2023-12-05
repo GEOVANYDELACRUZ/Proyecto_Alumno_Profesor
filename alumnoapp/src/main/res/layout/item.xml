@@ -11,26 +11,29 @@
         android:orientation="horizontal"
         android:layout_marginVertical="15dp">
         <TextView
-            android:id="@+id/txtValor"
+            android:id="@+id/txtNota"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="nota"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/txtCurso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="curso"/>
+            <TextView
                 android:id="@+id/txtCriterio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"/>
-            <TextView
-                android:id="@+id/txtDescr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17dp"/>
+                android:textSize="17dp"
+                android:text="criterio"/>
         </LinearLayout>
         <Button
             android:id="@+id/btnComment"

@@ -110,7 +110,6 @@ public class AsignarNotasAlum extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Alumnos alumnos=lstAlum.get(position);codAlumno=alumnos.getCodAlumno();
-                Toast.makeText(view.getContext(), codCurso+" : "+criterio+"\nEstudiante :"+codAlumno, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -177,6 +176,7 @@ public class AsignarNotasAlum extends AppCompatActivity {
                         alumnos.setAlumApPaterno(jsonObject.getString("alumAPaterno"));
                         alumnos.setAlumApMaterno(jsonObject.getString("alumAPMaterno"));
                         Log.i("TT","Alumno :"+alumnos.toString());
+                        asignarNota(alumnos.getCodAlumno());
                         lstAlum.add(alumnos);
                     }
                     ArrayAdapter<Alumnos> adapter = new ArrayAdapter<Alumnos>(AsignarNotasAlum.this, android.R.layout.simple_spinner_item, lstAlum);
@@ -196,15 +196,35 @@ public class AsignarNotasAlum extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
+    private void asignarNota(String codAlumno) {
+
+        String url = UtilDTG.RUTA+"insertarNota.php" +
+                "?codA="+codAlumno +
+                "&codC="+codCurso +
+                "&crit="+criterio;
+        url=url.replace(" ","%20");
+        Log.i("TT","url NOTA: "+url);
+        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+    }
+
     private void guardarnota() {
         progreso.setMessage("Registrando nota");
         progreso.show();
-        String url = UtilDTG.RUTA+"insertarNota.php?" +
-                "criterio="+criterio +
-                "&valor="+edtNota.getText().toString() +
-                "&descrip="+edtDescrip.getText().toString() +
-                "&curso="+curso +
-                "&dni="+codAlumno;
+        String url = UtilDTG.RUTA+"actualizarNota.php" +
+                "?codA=" +codAlumno+
+                "&codC="+codCurso +
+                "&crit="+criterio +
+                "&nota="+edtNota.getText().toString();
         url=url.replace(" ","%20");
         Log.i("TT","url NOTA: "+url);
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {

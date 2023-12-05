@@ -22,6 +22,10 @@
             android:icon="@drawable/ic_configuraciones"
             android:title="@string/menu_Configuraciones" />
         <item
+            android:id="@+id/nav_RespComentario"
+            android:icon="@drawable/ic_salir"
+            android:title="@string/menu_ResponderComentario" />
+        <item
             android:id="@+id/nav_Salir"
             android:icon="@drawable/ic_salir"
             android:title="@string/menu_Salir" />

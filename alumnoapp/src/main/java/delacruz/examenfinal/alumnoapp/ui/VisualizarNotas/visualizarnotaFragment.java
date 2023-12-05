@@ -132,7 +132,7 @@ public class visualizarnotaFragment extends Fragment {
         progreso = new ProgressDialog(getContext());
         progreso.setMessage("Cargando alumnos...");
         progreso.show();
-        String url = UtilDTG.RUTA+"consultarCursoAlumno.php?codNota="+codNotas;
+        String url = UtilDTG.RUTA+"consultarCursoAlumno.php?codigo="+codNotas;
         url=url.replace(" ","%20");
         Log.i("TT","url PROFESOR - CURSO: "+url);
 //        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
@@ -150,15 +150,13 @@ public class visualizarnotaFragment extends Fragment {
                         jsonObject = json.getJSONObject(i);
                         notas.setCodigo(jsonObject.getString("IDCursNota"));
                         notas.setCurso(jsonObject.getString("curNombre"));
-                        notas.setSubcodigo(jsonObject.getString("IDNota"));
-                        notas.setCriterio(jsonObject.getString("notCriterio"));
-                        notas.setValor(jsonObject.getString("notValor"));
-                        notas.setDescripcion(jsonObject.getString("notDescrip"));
+                        notas.setCriterio(jsonObject.getString("cursCriterio"));
+                        notas.setValor(jsonObject.getString("cursNota"));
                         notas.setCursNComment(jsonObject.getString("cursNComment"));
                         notas.setCursNRespuesta(jsonObject.getString("cursNRespuesta"));
-//                        Toast.makeText(getContext(), "Curso : "+ notas.getCurso(), Toast.LENGTH_SHORT).show();
                         lstNotas.add(notas);
                     }
+                    _recLisNotas.setVisibility(View.VISIBLE);
                     _recLisNotas.setAdapter(new AdapterCurso(getContext(), lstNotas));
                 }catch (Exception e){
                     Log.i("TT","Error al listar CURSOS : "+e);

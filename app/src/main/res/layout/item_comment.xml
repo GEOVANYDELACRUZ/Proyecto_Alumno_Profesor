@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvCursoNota"
+            android:textColor="@color/white"
+            android:text="Curso - rubro"></TextView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etxResp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLength="255"
+        android:hint="Ingrese texto (máximo 255 caracteres)"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/characterCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/255"
+        android:layout_gravity="end"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="8dp"/>
+    <!-- Layout horizontal para los botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="right">
+
+        <!-- Botones -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/blue"/>
+
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:backgroundTint="@color/red"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etxComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:enabled="false"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+</LinearLayout>

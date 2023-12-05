@@ -148,6 +148,8 @@
     <string name="msj1">Datos actualizados correctamente...</string>
     <string name="error_Null">Rellene todos los campos requeridos...</string>
     <string name="error_Pass">Las contraseñas son distintas...</string>
+    <string name="menu_ResponderComentario">Responder comentario</string>
+    <string name="error_msj1">No se agrego la respuesta...</string>
 
 
 </resources>

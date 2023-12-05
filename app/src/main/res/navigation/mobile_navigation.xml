@@ -28,6 +28,11 @@
         android:label="@string/menu_Configuraciones"
         tools:layout="@layout/configuraciones_fragment" />
     <fragment
+        android:id="@+id/nav_RespComentario"
+        android:name="delacruz.examenfinal.proyectofinal.ui.responderComentario.responderComentario"
+        android:label="@string/menu_ResponderComentario"
+        tools:layout="@layout/fragment_salir" />
+    <fragment
         android:id="@+id/nav_Salir"
         android:name="delacruz.examenfinal.proyectofinal.ui.Salir"
         android:label="@string/menu_Salir"
